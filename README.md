@@ -1,28 +1,10 @@
-# hackathon-revamped
+# Angular-Fullstack Image Upload Example
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 4.0.4.
+This is an example of how to post an image from the client to the server with Yeoman and the angular-fullstack generator. Some of the challenges involeded in doing this is that the angular app appends a security token on all the requests, which means you cannot just post to the endpoint with a form. You need to use angular. Added a directive and a service to handle angular side of post.
+For more details visit this [blog post](https://uncorkedstudios.com/blog/multipartformdata-file-upload-with-angularjs)
 
-## Getting Started
+The server uses multer to save the image, and has a custom Storage Engine to Save the file to disk.
 
-### Prerequisites
-
-- [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node >= 4.x.x, npm >= 2.x.x
-- [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
-- [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
-
-### Developing
-
-1. Run `npm install` to install server dependencies.
-
-2. Run `mongod` in a separate shell to keep an instance of the MongoDB Daemon running
-
-3. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
-
-## Build & development
-
-Run `gulp build` for building and `gulp serve` for preview.
-
-## Testing
-
-Running `npm test` will run the unit tests with karma.
+### Images located at
+````
+/client/assets/images/

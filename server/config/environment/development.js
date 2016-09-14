@@ -1,16 +1,12 @@
 'use strict';
-/*eslint no-process-env:0*/
 
 // Development specific configuration
 // ==================================
 module.exports = {
-
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/hackathonrevamped-dev'
+    uri: 'mongodb://localhost/img-dev'
   },
 
-  // Seed database on startup
   seedDB: true
-
 };

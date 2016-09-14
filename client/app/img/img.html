@@ -1,0 +1,51 @@
+<br>
+<div class="jumbotron col-sm-offset-3 col-sm-6">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="text-center">Team Description Paper for Hackathon</h2>
+        </div>
+
+        <div class="col-sm-12">
+
+            <br>
+            <form name="form">
+                <input 
+                    type="file" 
+                    ngf-select 
+                    file-model="myFile" 
+                    name="file" 
+                    ngf-max-size="5MB" 
+                />
+                <br>
+                <button type="submit" ng-click="uploadFile()">Submit</button>
+            </form>
+
+
+
+             <form name="myForm" id="myForm" novalidate>
+                <div class="row" ng-repeat="field in form.fields">
+                    <div class="container">
+                        <field-directive field="field">
+
+                        </field-directive>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <a ng-href = "" target="_blank"><h4 class="text-center"> Download the app questionnaire </h4></a>
+                    </div>
+                </div>
+            </form>
+            <!-- <br> -->
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="alert alert-danger" role="alert">
+        <span class="glyphicon glyphicon-exclamation-sign"></span>
+        Please upload the application in .doc, .docx or .zip format. Also, the maximum file size has to be limited to 5 MB
+    </div>
+</div>
+
