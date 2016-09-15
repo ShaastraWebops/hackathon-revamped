@@ -1,9 +1,9 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
+<div class="signup">
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1>Sign up</h1>
+      <h1 class="heading">Sign up</h1>
     </div>
     <div class="col-sm-12">
       <form class="form" name="form" ng-submit="register(form)" novalidate>
@@ -42,15 +42,31 @@
           <label>Password</label>
 
           <input type="password" name="password" class="form-control" ng-model="user.password"
-                 ng-minlength="3"
+                 ng-minlength="5"
                  required
                  mongoose-error/>
           <p class="help-block"
              ng-show="(form.password.$error.minlength || form.password.$error.required) && submitted">
-            Password must be at least 3 characters.
+            Password must be at least 5 characters.
           </p>
           <p class="help-block" ng-show="form.password.$error.mongoose">
             {{ errors.password }}
+          </p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.terms.$valid && submitted,
+                                            'has-error': form.terms.$invalid && submitted }">
+          <label>I agree to terms and conditions</label>
+
+          <input type="checkbox" name="terms"  ng-model="user.terms"
+                 required
+                 mongoose-error/>
+        
+          <p class="help-block" ng-show="form.terms.$error.required && submitted">
+            Please accept terms and conditions
+          </p>
+          <p class="help-block" ng-show="form.email.$error.mongoose">
+            {{ errors.checkbox }}
           </p>
         </div>
 
@@ -76,4 +92,5 @@
     </div>
   </div>
   <hr>
+</div>
 </div>

@@ -1,38 +1,392 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<header class="hero-unit" id="banner">
-  <div class="container">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
-    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
-  </div>
-</header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">Features:</h1>
-      <ul class="nav nav-tabs nav-stacked col-md-4 col-lg-4 col-sm-6" ng-repeat="thing in awesomeThings">
-        <li><a href="#" tooltip="{{thing.info}}">{{thing.name}}<button type="button" class="close" ng-click="deleteThing(thing)">&times;</button></a></li>
-      </ul>
+<section id="home" class="content page1" >
+<!-- Main Page contents -->
+<div class="row marketing">
+  <h1>HACKATHON</h1>
+    <h2>Innovate. Develop .Have Fun</h2>
+  <p class="info">
+Prelims on 3rd October 
+  </p>
+  <p class="info">@</p>
+  <p class="info">CRC</p>
+
+  
+
+</div>
+<!-- Arrow mark on bottom of page to change on hover Link to about -->
+<!-- <div class="row">
+<a href="#about" class="nav-scroll">
+<img src="images/scroll_down.png" class="img-responsive" onmouseover="this.src='images/scroll_down_home_hover.png'" onmouseout="this.src='images/scroll_down.png'" id="scroll_down"></a>
+<!-- IITM and Shaastra Logos -->
+
+ <!-- <a href="https://www.iitm.ac.in/" target="_blank" class="iitlogo"><img id="logo1" class="img-responsive" src="images/iitm.png">
+ </a>
+
+
+ <a href="http://shaastra.org/" target="_blank" class="shalogo"><img id="logo2" class="img-responsive" src="images/shaastra.png">
+ </a>
+</div>
+ -->
+</section> 
+
+<!-- About tab -->
+<div id="about" class="content page2">
+
+<!-- Arrow mark on top.Changes on hover Link to main-->
+<a href="#home" class="arrow nav-scroll arrow1">
+<img src="app/images/scroll_up.png">
+</a>
+
+<!-- About content -->
+<div class="row">
+
+<div class="jumbotron col-xs-7" >
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+</div>
+
+<img src="app/images/Computer.png" class="col-xs-4" id="comp">
+
+</div>
+
+<!-- Arrow on bottom of page.Changes on hover Link to faq-->
+<a href="#faq" class="arrow nav-scroll arrow2">
+<img src="app/images/scroll_down.png">
+</a>
+</div>
+
+
+
+<!-- FAQ Tab -->
+<div id="faq" class="tab faq content page3" >
+
+<!-- Arrow on top of page.Changes on hover Link to about -->
+<a href="#about" class="arrow nav-scroll arrow1">
+<img src="app/images/scroll_up.png">
+</a>
+
+<!-- Panel with questions -->
+<div id="panelDiv">
+ <div class="panel-group" id="accordion">
+
+
+<!-- Questtion 1 -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" class="btn-block"  href="#collapse1">
+        <span>What is Hackathon?</span></a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
     </div>
   </div>
 
-  <form class="thing-form">
-    <label>Syncs in realtime across clients</label>
-    <p class="input-group">
-      <input type="text" class="form-control" placeholder="Add a new thing here." ng-model="newThing">
-      <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" ng-click="addThing()">Add New</button>
-      </span>
-    </p>
-  </form>
+<!-- Questtion 2 -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse2">
+        Collapsible Group 2</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+
+<!-- Questtion 3 -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse3">
+        Collapsible Group 3</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+
+
+<!-- Questtion 4 -->
+ <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="btn-block" data-parent="#accordion" href="#collapse4">
+        Collapsible Group 4</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse ">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+
+<!-- Questtion 5-->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse5">
+        Collapsible Group 5</a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse6">
+        Collapsible Group 6</a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse ">
+      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.</div>
+    </div>
+  </div>
+</div>
+</div> 
+
+
+<!-- Arrow mark on bottom.Changes on hover Link to schedule-->
+<a href="#schedule" class="arrow nav-scroll arrow2" >
+<img src="app/images/scroll_down.png">
+</a>
 </div>
 
-<footer class="footer">
-  <div class="container">
-      <p>Angular Fullstack v2.0.13 |
-        <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
-         <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
+
+
+<div id="schedule" class="tab content page4">
+
+<!-- Arrow mark on top.Changes on hover Link to FAQ-->
+<a href="#faq" class="arrow nav-scroll arrow1" >
+<img src="app/images/scroll_up.png">
+</a>
+
+<!-- About content -->
+<div class="row">
+<div class="jumbotron col-xs-4 sched" id="tab1">
+<ul class="sch row">
+<li><h2>Day1</h2></li>
+<ul class="schedule">
+<li><img src="app/images/registration_icon.png"></li>
+<li><span>8:00 AM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/morning.png"></li>
+<li><span>9:00 AM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/morning.png"></li>
+<li><span>10:00 AM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/noon.png"></li>
+<li><span>12:00 noon</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/snacks.png"></li>
+<li><span>4:00 PM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/night.png"></li>
+<li><span>9:00 PM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+</ul>
+</div>
+
+<div class="jumbotron col-xs-4 " >
+<ul class="sch row">
+<li><h2>Day2</h2></li>
+<ul class="schedule">
+<li><img src="app/images/morning.png"></li>
+<li><span>8:00 AM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/morning.png"></li>
+<li><span>9:00 AM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/noon.png"></li>
+<li><span>12:00 Noon</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/snacks.png"></li>
+<li><span>4:00 PM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/night.png"></li>
+<li><span>9:00 PM</span></li>
+<li><label>Welcome </label></h2></li>
+</ul>
+<ul class="schedule row">
+<li><img src="app/images/night.png"></li>
+<li><span>11:00 PM</span></li>
+<li><label>Thank You </label></h2></li>
+</ul>
+</ul>
+</div>
+
+</div>
+
+<!-- Arrow on bottom of page.Changes on hover Link to faq-->
+<a href="#regcon" class="arrow nav-scroll arrow2">
+<img src="app/images/scroll_down.png">
+</a>
+</div>
+
+
+
+<div id="regcon" class="tab content">
+
+<!-- Arrow mark on top.Changes on hover Link to FAQ-->
+<a href="#schedule" class="arrow nav-scroll arrow1" >
+<img src="app/images/scroll_up.png">
+</a>
+
+
+<div>
+<button  class="btn btn-primary btn-lg btn-reg" data-toggle="modal" data-target="#myModal">
+  REGISTER NOW
+</button>
+
+<!-- Modal -->
+<div class="modal fade modal-bg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h1 class="modal-title" id="myModalLabel">Welcome</h1>
+        <p id="modalHead">Please fill out details to enroll for the event</p><br><br>
+      </div>
+      <div class="modal-body">
+        
+        <form class="form-horizontal" name="regForm" novalidate id="regForm">
+          
+<div class="form-group">
+<label class="modal-text name"> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+<input  type="text" class="modalFormInput"  id="name" name="name" required><br>
+<br>
+</div>
+<div class="form-group">
+<label class="modal-text email"  >Email-ID &nbsp;&nbsp;</label>
+<input type="email" class="modalFormInput" name="email" id="email">
+<br><br>
+</div>
+<div class="form-group">
+<label class="modal-text dob" > Date of Birth &nbsp;&nbsp;</label>
+<input type="text" class="modalFormInput" name="dob" id="dob" placeholder="DD/MM/YYYY">
+<br><br>
+</div>
+<div class="form-group">
+<label class="modal-text" > Password &nbsp;&nbsp;</label>
+<input type="password" class="modalFormInput" id="passwd" name="passwd"><br><br>
+</div>
+
+<div class="form-group">
+<label class="modal-text"> Confirm Password &nbsp;&nbsp;</label>
+<input type="password" class="modalFormInput" id="confpasswd" name="confpasswd"><br><br>
+</div>
+
+<div class="form-group">
+<label class="modal-text"> I accept terms and conditions &nbsp;&nbsp;</label>
+<input type="checkbox" name="agree" id="agree">
+<br>
+</div>
+<div class="modal-footer">
+        <input value="SUBMIT" type="submit" id="submit"  class="btn btn-primary btn-lg btn-custom">
+          
+      
+      </div>
+
+        </form>
+      </div>
+      
+    </div>
   </div>
-</footer>
+</div>
+</div>
+
+
+<div class="contact">
+<button  class="btn btn-primary btn-lg btn-reg" data-toggle="modal" data-target="#myModal1">
+  CONTACT US
+</button>
+
+<!-- Modal -->
+<div class="modal fade modal-bg" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h1 class="modal-title" id="myModalLabel1">Contact Us</h1>
+       
+      </div>
+      <div class="modal-body">
+        
+                
+
+      </div>
+
+
+<div class="modal-footer">
+       
+          
+      
+
+
+      
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+  

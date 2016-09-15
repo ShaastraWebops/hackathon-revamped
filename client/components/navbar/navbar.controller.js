@@ -7,6 +7,17 @@ angular.module('imgApp')
       'link': '/'
     }];
 
+    
+jQuery('.nav-scroll').on('click',function(event) {
+  event.preventDefault();
+  var target = jQuery(this).attr('href');
+  
+  jQuery('html, body').animate({
+    scrollTop: jQuery(target).offset().top-30
+  }, 800);
+});
+
+
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;
