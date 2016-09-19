@@ -2,33 +2,35 @@
   background-color: #000;
 }
 .navbar-custom li a{
-  font-size: 2vh;
- padding-left:1vw;
+  margin-left: 25px;
+ padding-left:2vw;
+
   }
 
 .navbar-custom{
-	
-	width: 100vw;
+  
+  width: 100vw;
 }  
 .navbar-custom li:first-child{
-	padding-right: 16vw;
+  margin-left: 2vw;
+  padding-right: 10vw;
 }  
 .nav-style .navbar-nav > li > a {
     color:#ddd;
 }
  .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus ,.navbar-nav > .active > a:visited {
-    color: #ddd !important;
+    color: #8099B4 !important;
  background-color: #000 !important;
 }
 
-.active
-{ 
-     color: #ddd !important;
- background-color: #000 !important;
+a.active
+{    text-decoration: none;
+     color: #8099B4 !important;
+     background-color: #000 !important;
 }
 
       
- .navbar-nav > li > a:hover {
+.nav-style .navbar-nav > li > a:hover {
     text-decoration: none;
     color: #8099B4;
     
@@ -39,8 +41,7 @@
    
  .navbar-nav > li > a:focus,    
  .navbar-nav > li > a:visited,
- {
+.navbar-nav > li > a:hover {
   text-decoration: none;
-  color: #ddd;
         background-color: #000;    
 }

@@ -3,23 +3,7 @@
 angular.module('imgApp')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
-   
-   jQuery(document).ready(function() {
-var i=0;
-  jQuery(document).on("keydown", function(e) {
-       if (e.keyCode == 40) { 
-                     console.log(jQuery(this).find('.content:nth-child('+i+')').id);
-                     var target = jQuery(this).find('.content:nth-child(0)').next();
-
-  
-  jQuery('html, body').animate({
-    scrollTop: jQuery(target).offset().top-30
-  }, 800);     
-  i++;
-               }
-           });
-       }
-  );
+ 
   jQuery(document).ready(function(){
  
     
@@ -54,6 +38,34 @@ jQuery('.nav-scroll').on('click',function(event) {
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
+    $scope.errors = {};
+    $scope.isopen=true;
+    $scope.query = function(form) {
+      $scope.submitted = true;
+
+      if(form.$valid) {
+        Auth.createUser({
+          name: $scope.user.name,
+          email: $scope.user.email,
+          password: $scope.user.password
+        })
+        .then(function() {
+          // Account created, redirect to home
+          $location.path('/');
+        })
+        .catch( function(err) {
+          err = err.data;
+          $scope.errors = {};
+
+          // Update validity of form fields that match the mongoose errors
+          angular.forEach(err.errors, function(error, field) {
+            form[field].$setValidity('mongoose', false);
+            $scope.errors[field] = error.message;
+          });
+        });
+      }
+    };
+    
 
     $scope.$on('$destroy', function () {
       socket.unsyncUpdates('thing');
