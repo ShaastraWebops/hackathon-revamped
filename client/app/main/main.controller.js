@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('imgApp')
-  .controller('MainCtrl', function ($scope, $http, socket) {
+  .controller('MainCtrl', function ($scope, $http, socket,$location) {
     $scope.awesomeThings = [];
  
   jQuery(document).ready(function(){
@@ -38,32 +38,37 @@ jQuery('.nav-scroll').on('click',function(event) {
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
-    $scope.errors = {};
+    
     $scope.isopen=true;
-    $scope.query = function(form) {
+    
+    $scope.querySubmit = function(form) {
       $scope.submitted = true;
 
       if(form.$valid) {
-        Auth.createUser({
-          name: $scope.user.name,
-          email: $scope.user.email,
-          password: $scope.user.password
-        })
-        .then(function() {
+              $http.post('/api/imgs/query', { 
+                qname: $scope.query.name,
+                queryEmail:$scope.query.email,
+                query:$scope.user.query,
+              })
+              .then( function() {
           // Account created, redirect to home
           $location.path('/');
-        })
-        .catch( function(err) {
-          err = err.data;
-          $scope.errors = {};
+          console.log("Successfully submitted")
+                      } )
+               .catch( function(err) {
+                  err = err.data;
+                  $scope.errors = {};
 
           // Update validity of form fields that match the mongoose errors
-          angular.forEach(err.errors, function(error, field) {
-            form[field].$setValidity('mongoose', false);
-            $scope.errors[field] = error.message;
+                angular.forEach(err.errors, function(error, field) {
+                form[field].$setValidity('mongoose', false);
+                $scope.errors[field] = error.message;
           });
-        });
-      }
+        }); 
+              ;
+
+
+              }
     };
     
 

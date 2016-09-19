@@ -327,13 +327,13 @@ services is highly welcome.
       <h1>Contact</h1>
     </div>
     <div class="col-sm-12">
-      <form class="form" name="contact" ng-submit="query(contact)" novalidate>
+      <form class="form" name="contact" ng-submit="querySubmit(contact)" novalidate>
 
         <div class="form-group" ng-class="{ 'has-success': contact.name.$valid && submitted,
                                             'has-error': contact.name.$invalid && submitted }">
           <label>Name</label>
 
-          <input type="text" name="name" class="form-control" ng-model="user.name"
+          <input type="text" name="name" class="form-control" ng-model="query.name"
                  required/>
           <p class="help-block" ng-show="contact.name.$error.required && submitted">
             A name is required
@@ -347,7 +347,7 @@ services is highly welcome.
                                             'has-error': contact.email.$invalid && submitted }">
           <label>Email</label>
 
-          <input type="email" name="email" class="form-control" ng-model="user.email"
+          <input type="email" name="email" class="form-control" ng-model="query.email"
                  required
                  mongoose-error/>
           <p class="help-block" ng-show="contact.email.$error.email && submitted">
@@ -361,8 +361,8 @@ services is highly welcome.
           </p>
         </div>
 
-        <div class="form-group" ng-class="{ 'has-success': contact.name.$valid && submitted,
-                                            'has-error': contact.name.$invalid && submitted }">
+        <div class="form-group" ng-class="{ 'has-success': contact.query.$valid && submitted,
+                                            'has-error': contact.query.$invalid && submitted }">
           <label>Query</label>
 
           <textarea name="query" class="form-control" ng-model="user.query"

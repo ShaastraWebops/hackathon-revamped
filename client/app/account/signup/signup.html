@@ -23,7 +23,7 @@
                                             'has-error': form.member1Email.$invalid && submitted }">
           <label>Team Member 1  Email (Use this to login)</label>
 
-          <input type="email" name="member1Email" class="form-control" ng-model="user.member1Name"
+          <input type="email" name="member1Email" class="form-control" ng-model="user.member1Email"
                  required
                  mongoose-error/>
           <p class="help-block" ng-show="form.member1Email.$error.email && submitted">
@@ -164,7 +164,7 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.college3Name.$valid && submitted,
                                             'has-error': form.college3Name.$invalid && submitted }">
-          <label>Team Member 1 Institute</label>
+          <label>Team Member 3 Institute</label>
 
           <input type="text" name="college3Name" class="form-control" ng-model="user.college3Name"
                  required/>
