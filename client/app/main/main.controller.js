@@ -6,17 +6,37 @@ angular.module('imgApp')
  
   jQuery(document).ready(function(){
  
-    
-            
+         
   jQuery(this).scrollTop(0);
  });
-
+// jQuery(document).keydown(function(e){
+//   var current = jQuery('div.current').data('section');
+//     if (e.keyCode == 40) {
+//         //SCROLL DOWN
+//         var next = current + 1;
+//         $('.section'+current).removeClass('current');
+//       $('body').scrollTo('.section'+next, {duration:600}, {queue:true});
+//       $('.section'+next).addClass('current');
+//         e.preventDefault();
+//         return false;
+//       } 
+ 
+//   else if (e.keyCode == 38) {
+//         //SCROLL UP
+//         var prev = current - 1;
+//         $('.section'+current).removeClass('current');
+//         $('body').scrollTo( '.section' + prev, 600, {queue:true} );
+//         $('.section'+prev).addClass('current');
+//         e.preventDefault();
+//         return false;
+//       }
+// });
 
 // Scroll To specified tab
-jQuery('.nav-scroll').on('click',function(event) {
+jQuery('.nav-scroll').on('click',function(event) { 
+       
   event.preventDefault();
   var target = jQuery(this).attr('href');
-  
   jQuery('html, body').animate({
     scrollTop: jQuery(target).offset().top-30
   }, 800);

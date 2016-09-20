@@ -68,10 +68,7 @@
           <label>Team Member 2</label>
 
           <input type="text" name="member2Name" class="form-control" ng-model="user.member2Name"
-                 required/>
-          <p class="help-block" ng-show="form.member2Name.$error.required && submitted">
-          Team Member 2's Name is required
-          </p>
+                 />
         </div>
 
         <div class="form-group" ng-class="{ 'has-success': form.member2Email.$valid && submitted,
@@ -79,13 +76,9 @@
           <label>Team Member 2 Email</label>
 
           <input type="email" name="member2Email" class="form-control" ng-model="user.member2Email"
-                 required
                  mongoose-error/>
           <p class="help-block" ng-show="form.member2Email.$error.email && submitted">
             Enter a valid email.
-          </p>
-          <p class="help-block" ng-show="form.member2Email.$error.required && submitted">
-            Email address is required
           </p>
           <p class="help-block" ng-show="form.member2Email.$error.mongoose">
             {{ errors.email }}
@@ -95,12 +88,9 @@
                                             'has-error': form.member2Phone.$invalid && submitted }">
           <label>Team Member 2 Phone Number</label>
 
-          <input type="number" name="memberPhone" class="form-control" ng-model="user.member2Phone"
+          <input type="number" name="member2Phone" class="form-control" ng-model="user.member2Phone"
            ng-minlength="10" ng-maxlength="10"
-                 required/>
-          <p class="help-block" ng-show="form.member2Phone.$error.required && submitted">
-            Contact number is required
-          </p>
+                 />
           <p class="help-block" ng-show="form.member2Phone.$error.minlength && submitted">
             Enter 10 digit number
           </p>
@@ -111,11 +101,7 @@
                                             'has-error': form.college2Name.$invalid && submitted }">
           <label>Team Member 2 Institute</label>
 
-          <input type="text" name="college2Name" class="form-control" ng-model="user.college2Name"
-                 required/>
-          <p class="help-block" ng-show="form.college2Name.$error.required && submitted">
-            Institute Name is required
-          </p>
+          <input type="text" name="college2Name" class="form-control" ng-model="user.college2Name"/>         
         </div>
 
           <div class="form-group" ng-class="{ 'has-success': form.member3Name.$valid && submitted,
@@ -123,10 +109,7 @@
           <label>Team Member 3</label>
 
           <input type="text" name="member3Name" class="form-control" ng-model="user.member3Name"
-                 required/>
-          <p class="help-block" ng-show="form.member3Name.$error.required && submitted">
-          Team Member 3's Name is required
-          </p>
+                 />
         </div>
 
         <div class="form-group" ng-class="{ 'has-success': form.member3Email.$valid && submitted,
@@ -134,13 +117,9 @@
           <label>Team Member 3 Email</label>
 
           <input type="email" name="member3Email" class="form-control" ng-model="user.member3Email"
-                 required
                  mongoose-error/>
           <p class="help-block" ng-show="form.member3Email.$error.email && submitted">
             Enter a valid email.
-          </p>
-          <p class="help-block" ng-show="form.member3Email.$error.required && submitted">
-            Email address is required
           </p>
           <p class="help-block" ng-show="form.member3Email.$error.mongoose">
             {{ errors.email }}
@@ -152,10 +131,7 @@
 
           <input type="number" name="member3Phone" class="form-control" ng-model="user.member3Phone"
            ng-minlength="10" ng-maxlength="10"
-                 required/>
-          <p class="help-block" ng-show="form.member3Phone.$error.required && submitted">
-            Contact number is required
-          </p>
+                 />
           <p class="help-block" ng-show="form.member3Phone.$error.minlength && submitted">
             Enter 10 digit number
           </p>
@@ -167,10 +143,7 @@
           <label>Team Member 3 Institute</label>
 
           <input type="text" name="college3Name" class="form-control" ng-model="user.college3Name"
-                 required/>
-          <p class="help-block" ng-show="form.college3Name.$error.required && submitted">
-            Institute Name is required
-          </p>
+                 />
         </div>
 
         <div class="form-group" ng-class="{ 'has-success': form.teamName.$valid && submitted,
@@ -206,7 +179,7 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.terms.$valid && submitted,
                                             'has-error': form.terms.$invalid && submitted }">
-          <label>I agree to terms and conditions</label>
+          <label>The team agrees to terms and conditions</label>
 
           <input type="checkbox" name="terms"  ng-model="user.terms"
                  required

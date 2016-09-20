@@ -1,0 +1,17 @@
+.heading{
+      font-family: headFont !important;
+
+	margin-top:10vh;
+	margin-bottom:3vh;
+}
+.settings{
+	width:100vw;
+	min-height:100vh;
+	background-color:#262f36;
+	color:#ddd;
+}
+
+label,.help-block{
+	font-size:20px;
+	font-weight:bold;
+}

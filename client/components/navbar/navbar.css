@@ -2,8 +2,8 @@
   background-color: #000;
 }
 .navbar-custom li a{
-  margin-left: 25px;
- padding-left:2vw;
+  margin-left: 1vw;
+ padding-left:0.5vw;
 
   }
 
@@ -22,8 +22,12 @@
     color: #8099B4 !important;
  background-color: #000 !important;
 }
+.iitm{
+  background-color: #ffffff;
+  
+}
 
-a.active
+li.active
 {    text-decoration: none;
      color: #8099B4 !important;
      background-color: #000 !important;
