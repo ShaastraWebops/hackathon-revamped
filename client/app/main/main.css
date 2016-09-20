@@ -141,9 +141,8 @@ margin-top: 8vh;
 
 .navbar-custom li a{
    font-family: headFont !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
-font-size: 1.8vh;
+  padding-top: 3vh;
+  font-size: 1.8vh;
 }
 
 .nav-style .navbar-nav > li > a {

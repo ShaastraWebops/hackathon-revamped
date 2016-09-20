@@ -1,5 +1,5 @@
 <div class="navbar navbar-default navbar-fixed-top nav-bg" ng-controller="NavbarCtrl">
-  
+  <div class="container-fluid">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>
@@ -14,7 +14,7 @@
   
 
       <ul class="nav navbar-nav navbar-custom pull-right">
-          <li><a href="/"><!-- <img src="app/images/iitm.png" class="iitm"> --></a></li>
+          <li><a href="/"><img src="app/images/govt.jpg" class="govt"></a></li>
         <li><a href="#home" class="nav-scroll">HOME</a></li>
         <li><a href="#about" class="nav-scroll">ABOUT</a></li>
         <li><a href="#PS" class="nav-scroll">THEME</a></li>
@@ -29,5 +29,5 @@
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">LOGOUT</a></li>
       </ul>
     </div>
-  
+  </div>
 </div>

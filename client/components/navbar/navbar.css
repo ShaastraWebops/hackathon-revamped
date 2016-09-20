@@ -13,7 +13,9 @@
 }  
 .navbar-custom li:first-child{
   margin-left: 2vw;
-  padding-right: 10vw;
+  padding-right: 22vw;
+  margin-top: -1vh;
+  padding-bottom: 0px;
 }  
 .nav-style .navbar-nav > li > a {
     color:#ddd;
@@ -22,8 +24,11 @@
     color: #8099B4 !important;
  background-color: #000 !important;
 }
-.iitm{
-  background-color: #ffffff;
+.govt{
+  background-color: none;
+height: 4.5vh;
+width: 2.8vw;
+  margin-right: 5vh;
   
 }
 
