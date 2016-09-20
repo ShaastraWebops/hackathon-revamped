@@ -10,7 +10,7 @@ angular.module('imgApp')
 
       if(form.$valid) {
         Auth.login({
-          member1Email: $scope.user.email,
+          email: $scope.user.email,
           password: $scope.user.password
         })
         .then( function() {
