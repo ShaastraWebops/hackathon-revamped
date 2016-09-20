@@ -29,6 +29,14 @@ exports.create = function(req, res) {
     return res.json(201, img);
   });*/
 };
+exports.createQuery = function(req, res) {
+  // console.log(req.user.name);
+  Img.create(req.body, function(err, img) {
+    if(err) { return handleError(res, err); }
+    return res.json(201, img);
+   });
+};
+
 
 // Updates an existing img in the DB.
 exports.update = function(req, res) {

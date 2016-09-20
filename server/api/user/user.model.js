@@ -6,19 +6,19 @@ var crypto = require('crypto');
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
 
 var UserSchema = new Schema({
-  teamName: String,
   name: String,
   email: { type: String, lowercase: true },
-  phone: String,
-  college: String,
-  secondName: String,
-  secondEmail: { type: String, lowercase: true },
-  secondPhone: String,
-  secondCollege: String,
-  thirdName: String,
-  thirdEmail: { type: String, lowercase: true },
-  thirdPhone: String,
-  thirdCollege: String,
+  phone:String,
+  collegeName:String,
+  member2Name: String,
+  member2Email: { type: String, lowercase: true },
+  member2Phone:String,
+  college2Name:String,
+  member3Name: String,
+  member3Email: { type: String, lowercase: true },
+  member3Phone:String,
+  college3Name:String,
+  teamName:String,
   role: {
     type: String,
     default: 'user'

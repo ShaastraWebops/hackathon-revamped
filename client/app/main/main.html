@@ -1,38 +1,21 @@
+
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 
-<section id="home" class="content page1" >
+<div id="home" class="content current section1" >
 <!-- Main Page contents -->
 <div class="row marketing">
-  <h1>HACKATHON</h1>
-    <h2>Innovate. Develop .Have Fun</h2>
-  <p class="info">
-Prelims on 3rd October 
-  </p>
-  <p class="info">@</p>
-  <p class="info">CRC</p>
-
-  
-
+  <h1>Emergency App Hackathon</h1>
+    <h2 id="innovate">Innovate.Develop.Save Lives</h2>
+<h2 class="info">Price Money of 2 lakhs up for grabs</h2>
 </div>
-<!-- Arrow mark on bottom of page to change on hover Link to about -->
-<!-- <div class="row">
-<a href="#about" class="nav-scroll">
-<img src="images/scroll_down.png" class="img-responsive" onmouseover="this.src='images/scroll_down_home_hover.png'" onmouseout="this.src='images/scroll_down.png'" id="scroll_down"></a>
-<!-- IITM and Shaastra Logos -->
-
- <!-- <a href="https://www.iitm.ac.in/" target="_blank" class="iitlogo"><img id="logo1" class="img-responsive" src="images/iitm.png">
- </a>
-
-
- <a href="http://shaastra.org/" target="_blank" class="shalogo"><img id="logo2" class="img-responsive" src="images/shaastra.png">
- </a>
-</div>
- -->
-</section> 
+<a href="#about" class="arrow nav-scroll arrow2">
+<img src="app/images/scroll_down.png">
+</a>
+</div> 
 
 <!-- About tab -->
-<div id="about" class="content page2">
+<div id="about" class="content section2">
 
 <!-- Arrow mark on top.Changes on hover Link to main-->
 <a href="#home" class="arrow nav-scroll arrow1">
@@ -41,14 +24,75 @@ Prelims on 3rd October
 
 <!-- About content -->
 <div class="row">
-
-<div class="jumbotron col-xs-7" >
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<div class="col-xs-7 col-lg-4 col-sm-6 aboutus">
+<h2 >ABOUT US</h2>
+<div class="jumbotron">
+<p>Organised by TNHSP and IIT Madras, The Emergency Services Application Hackathon brings you the opportunity to innovate and directly impact the current structure of the 108 Emergency Services in Tamil Nadu .</p>
+<p>
+In case of any emergency, rapid intervention is critical in determining the outcome. The emergency service personnel have the crucial responsibility of bringing the response time to as minimal as possible.</p> 
+<p>And Innovations in technology can play an integral part in achieving this goal. The aim of this hackathon is to come up with solutions that leverage the capabilities of a smart phone and integrate them with the backend infrastructure at the Call-Centre to make the flow of information fast and seamless thereby greatly increasing  the efficiency.
 </p>
 
 </div>
+</div>
+<img src="app/images/Ambulance.png" class="col-xs-4 img-responisve col-lg-5 col-sm-5" id="comp">
 
-<img src="app/images/Computer.png" class="col-xs-4" id="comp">
+</div>
+
+<!-- Arrow on bottom of page.Changes on hover Link to faq-->
+<a href="#PS" class="arrow nav-scroll arrow2">
+<img src="app/images/scroll_down.png">
+</a>
+</div>
+
+<div id="PS" class="content">
+
+<!-- Arrow mark on top.Changes on hover Link to main-->
+<a href="#about" class="arrow nav-scroll arrow1">
+<img src="app/images/scroll_up.png">
+</a>
+
+<!-- About content -->
+<div class="row">
+
+<div class="jumbotron col-xs-7 col-lg-7 col-sm-6 theme" >
+<p>The solution should address a minimum of the following aspects:</p>
+<h2 class="themeHead">A Smartphone Application that</h2>
+<ul class="themeHead">
+<li>relays the geo-location of the individual to the call centre</li>
+
+<li>provides information about nearby hospitals and blood banks obtained from the call centre
+
+or present offline</li>
+</ul>
+
+<h2 class="themeHead">A Web Service Application that</h2>
+<ul class="themeHead">
+<li>simulates the backend infrastructure at the call centre</li>
+
+<li>Access database of the locations of Govt. ambulances and all hospitals in Tamil Nadu</li>
+
+<li>Logs information about every call to a database and dispatches call to nearest ambulance</li>
+</ul>
+
+<h2 class="themeHead">A database interface to</h2>
+
+<ul class="themeHead">
+<li>retrieve and store data in the format specified so as to not limit its access only to the web
+
+service application.
+</li>
+<br>
+
+<p>Developing Algorithms for Analytics on the data collected is encouraged.
+
+Any other aspect of innovation above and beyond the aforementioned in the theme of Emergency
+
+services is highly welcome.
+</p>
+</div>
+
+
 
 </div>
 
@@ -64,111 +108,114 @@ Prelims on 3rd October
 <div id="faq" class="tab faq content page3" >
 
 <!-- Arrow on top of page.Changes on hover Link to about -->
-<a href="#about" class="arrow nav-scroll arrow1">
+<a href="#PS" class="arrow nav-scroll arrow1">
 <img src="app/images/scroll_up.png">
 </a>
 
 <!-- Panel with questions -->
 <div id="panelDiv">
- <div class="panel-group" id="accordion">
+ 
+
+<accordion close-others="true">
+    <accordion-group is-open="isopen" intially-open>
+        <accordion-heading ng-click="isopen=!isopen" >
+           <div class="accord" >
+            What is Emergency Services Hackathon?
+
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen, 'glyphicon-chevron-down': !isopen}">
+           </i>
+           </div>
+       </accordion-heading>
+      <p class="acc">The Emergency Services Hackathon is aimed at developing solutions for a quick and efficient response to emergencies. This is sponsored by the Tamil Nadu Government and aims to incorporate the winning solutions in the real field.</p>
+
+   </accordion-group>
+<accordion-group is-open="isopen1" >
+        <accordion-heading ng-click="isopen1=!isopen1">
+           <div class="accord">
+            What should I build?
+           
+            <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen1, 'glyphicon-chevron-down': !isopen1}">
+           </i>
+           </div>
+       </accordion-heading>
+   <p class="acc">The solutions should create a smart phone app that uses location data to decrease the time of response for the accident site. This will also involve creating a web service application to simulate the 108 Centre and also log in the data to leverage the benefits of data analytics.
+   </p>
+   </accordion-group>
+   <accordion-group is-open="isopen2" >
+        <accordion-heading ng-click="isopen2=!isopen2">
+           <div class="accord">
+            How big can my team be? 
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen2, 'glyphicon-chevron-down': !isopen2}">
+           </i>
+           </div>
+       </accordion-heading>
+       <p class="acc">
+        The teams can be anywhere between 1-3 and should have current students as participants. If you have any queries please use the information provided under contact us.
+        </p>
+   </accordion-group>
+     <accordion-group is-open="isopen3" >
+        <accordion-heading ng-click="isopen3=!isopen3">
+           <div class="accord">
+        Can I use external APIs, services and SDKs? 
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen3, 'glyphicon-chevron-down': !isopen3}">
+           </i>
+           </div>
+       </accordion-heading>
+       You are encouraged to use any 3rd party services, APIs, open source projects, libraries, and frameworks as long as they are publicly available on the web and do not infringe on any copyrights .
+
+   </accordion-group>
+     <accordion-group is-open="isopen4" >
+        <accordion-heading ng-click="isopen4=!isopen4">
+           <div class="accord">
+            What is the structure of the event?
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen4, 'glyphicon-chevron-down': !isopen4}">
+           </i>
+           </div>
+       </accordion-heading>
+        <p class="acc">There will be a preliminary round involving online submissions and the shortlisted teams will be brought down to IITM for a one day hackathon event where the teams will be allowed to showcase their work to the panel of experts. The online submissions should provide details of the solution such as innovative aspects in the teams approach, progress etc. in the form of a word document. Any pictures and screenshots should can also be inserted in the word document .The Timeline for this is available in the website.
+        </p>
+   </accordion-group>
+     <accordion-group is-open="isopen5" >
+        <accordion-heading ng-click="isopen5=!isopen5">
+           <div class="accord">
+          Are Travel Reimbursements provided for shortlisted teams? 
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen5, 'glyphicon-chevron-down': !isopen5}">
+           </i>
+           </div>
+       </accordion-heading>
+          <p class="acc">Yes, the shortlisted teams will be provided a travel allowance to cover all/a portion of their travel expenses subject to a cap on the maximum reimbursement provided.
+          </p>
+
+   </accordion-group>
+
+    <accordion-group is-open="isopen6" >
+        <accordion-heading ng-click="isopen6=!isopen6">
+           <div class="accord">
+            What is the Prize Money?
+           <i class="pull-right glyphicon" 
+              ng-class="{'glyphicon-   chevron-down': isopen6, 'glyphicon-chevron-down': !isopen6}">
+           </i>
+           </div>
+       </accordion-heading>
+        <p class="acc">The total prize money for the winning teams is 2,00,000.  They are divided as follows:<br>
+        First Place     -   INR 1,00,000 <br>
+        Second Place    -      INR 60,000 <br>
+        Third Place     -   INR 40,000 <br>
+        </p>
+   </accordion-group>
 
 
-<!-- Questtion 1 -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" class="btn-block"  href="#collapse1">
-        <span>What is Hackathon?</span></a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-
-<!-- Questtion 2 -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse2">
-        Collapsible Group 2</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-
-<!-- Questtion 3 -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse3">
-        Collapsible Group 3</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
+</accordion>
+  
 
 
-<!-- Questtion 4 -->
- <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" class="btn-block" data-parent="#accordion" href="#collapse4">
-        Collapsible Group 4</a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse ">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
 
-<!-- Questtion 5-->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse5">
-        Collapsible Group 5</a>
-      </h4>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-
-<div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" class="btn-block"  data-parent="#accordion" href="#collapse6">
-        Collapsible Group 6</a>
-      </h4>
-    </div>
-    <div id="collapse6" class="panel-collapse collapse ">
-      <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.</div>
-    </div>
-  </div>
-</div>
 </div> 
 
 
@@ -188,7 +235,7 @@ Prelims on 3rd October
 </a>
 
 <!-- About content -->
-<div class="row">
+<!-- <div class="row" ng-hide="true">
 <div class="jumbotron col-xs-4 sched" id="tab1">
 <ul class="sch row">
 <li><h2>Day1</h2></li>
@@ -261,17 +308,31 @@ Prelims on 3rd October
 </ul>
 </div>
 
+</div> -->
+
+<div class="row">
+<div class="jumbotron col-xs-6 col-lg-5  sched tab1">
+<ul class="sch row">
+<li><h2>Structure of Event</h2></li>
+<li><p>Oct 10th  Preliminary</p></li>
+
+<li><p>Oct 15th  Shortlist release</p></li> 
+
+<li><p>Nov 27th  Finale at IITM</p></li>
+
+</ul>
+</div>
 </div>
 
 <!-- Arrow on bottom of page.Changes on hover Link to faq-->
-<a href="#regcon" class="arrow nav-scroll arrow2">
+<a href="#contact" class="arrow nav-scroll arrow2">
 <img src="app/images/scroll_down.png">
 </a>
 </div>
 
 
 
-<div id="regcon" class="tab content">
+<div id="contact" class="tab content">
 
 <!-- Arrow mark on top.Changes on hover Link to FAQ-->
 <a href="#schedule" class="arrow nav-scroll arrow1" >
@@ -279,106 +340,78 @@ Prelims on 3rd October
 </a>
 
 
-<div>
-<button  class="btn btn-primary btn-lg btn-reg" data-toggle="modal" data-target="#myModal">
-  REGISTER NOW
-</button>
 
-<!-- Modal -->
-<div class="modal fade modal-bg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h1 class="modal-title" id="myModalLabel">Welcome</h1>
-        <p id="modalHead">Please fill out details to enroll for the event</p><br><br>
-      </div>
-      <div class="modal-body">
-        
-        <form class="form-horizontal" name="regForm" novalidate id="regForm">
-          
-<div class="form-group">
-<label class="modal-text name"> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-<input  type="text" class="modalFormInput"  id="name" name="name" required><br>
-<br>
-</div>
-<div class="form-group">
-<label class="modal-text email"  >Email-ID &nbsp;&nbsp;</label>
-<input type="email" class="modalFormInput" name="email" id="email">
-<br><br>
-</div>
-<div class="form-group">
-<label class="modal-text dob" > Date of Birth &nbsp;&nbsp;</label>
-<input type="text" class="modalFormInput" name="dob" id="dob" placeholder="DD/MM/YYYY">
-<br><br>
-</div>
-<div class="form-group">
-<label class="modal-text" > Password &nbsp;&nbsp;</label>
-<input type="password" class="modalFormInput" id="passwd" name="passwd"><br><br>
-</div>
 
-<div class="form-group">
-<label class="modal-text"> Confirm Password &nbsp;&nbsp;</label>
-<input type="password" class="modalFormInput" id="confpasswd" name="confpasswd"><br><br>
-</div>
 
-<div class="form-group">
-<label class="modal-text"> I accept terms and conditions &nbsp;&nbsp;</label>
-<input type="checkbox" name="agree" id="agree">
-<br>
-</div>
-<div class="modal-footer">
-        <input value="SUBMIT" type="submit" id="submit"  class="btn btn-primary btn-lg btn-custom">
-          
-      
-      </div>
 
-        </form>
-      </div>
-      
+
+
+
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+      <h1>Contact</h1>
     </div>
-  </div>
-</div>
-</div>
+    <div class="col-sm-12">
+      <form class="form" name="contact" ng-submit="querySubmit(contact)" novalidate>
 
+        <div class="form-group" ng-class="{ 'has-success': contact.name.$valid && submitted,
+                                            'has-error': contact.name.$invalid && submitted }">
+          <label>Name</label>
 
-<div class="contact">
-<button  class="btn btn-primary btn-lg btn-reg" data-toggle="modal" data-target="#myModal1">
-  CONTACT US
-</button>
+          <input type="text" name="name" class="form-control" ng-model="query.name"
+                 required/>
+          <p class="help-block" ng-show="contact.name.$error.required && submitted">
+            A name is required
+          </p>
+        </div>
 
-<!-- Modal -->
-<div class="modal fade modal-bg" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h1 class="modal-title" id="myModalLabel1">Contact Us</h1>
-       
-      </div>
-      <div class="modal-body">
         
-                
-
-      </div>
 
 
-<div class="modal-footer">
-       
-          
-      
+        <div class="form-group" ng-class="{ 'has-success': contact.email.$valid && submitted,
+                                            'has-error': contact.email.$invalid && submitted }">
+          <label>Email</label>
 
+          <input type="email" name="email" class="form-control" ng-model="query.email"
+                 required
+                 mongoose-error/>
+          <p class="help-block" ng-show="contact.email.$error.email && submitted">
+            Please enter a valid email.
+          </p>
+          <p class="help-block" ng-show="contact.email.$error.required && submitted">
+            Please enter your email address
+          </p>
+          <p class="help-block" ng-show="contact.email.$error.mongoose">
+            {{ errors.email }}
+          </p>
+        </div>
 
-      
-      </div>
-      
+        <div class="form-group" ng-class="{ 'has-success': contact.query.$valid && submitted,
+                                            'has-error': contact.query.$invalid && submitted }">
+          <label>Query</label>
+
+          <textarea name="query" class="form-control" ng-model="user.query"
+              required rows="5" cols="50"></textarea>
+          <p class="help-block" ng-show="contact.query.$error.required && submitted">
+            Please enter your doubts
+          </p>
+        </div>
+        
+
+        <div>
+          <input class="btn pull-right btn-inverse btn-lg btn-primary" type="submit" value="SUBMIT
+          " />
+        
+        </div>
+
+        
+
+        
+      </form>
     </div>
-  </div>
-</div>
 </div>
 
 
@@ -390,3 +423,4 @@ Prelims on 3rd October
 
 </div>
   
+

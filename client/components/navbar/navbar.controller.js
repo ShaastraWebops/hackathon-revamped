@@ -7,7 +7,15 @@ angular.module('imgApp')
       'link': '/'
     }];
 
-    
+  jQuery('.navbar li').click(function() {
+  jQuery('.navbar li.active').removeClass('active');
+    var $this = jQuery(this);
+    if (!$this.hasClass('active')) {
+        $this.addClass('active');
+    }
+  
+});
+
 jQuery('.nav-scroll').on('click',function(event) {
   event.preventDefault();
   var target = jQuery(this).attr('href');

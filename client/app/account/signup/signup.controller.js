@@ -10,8 +10,19 @@ angular.module('imgApp')
 
       if(form.$valid) {
         Auth.createUser({
-          name: $scope.user.name,
-          email: $scope.user.email,
+          name: $scope.user.member1Name,
+          email: $scope.user.member1Email,
+          phone:$scope.user.member1Phone,
+          collegeName:$scope.user.college1Name,
+           member2Name: $scope.user.member2Name,
+          member2Email: $scope.user.member2Email,
+          member2Phone:$scope.user.member2Phone,
+          college2Name:$scope.user.college2Name,
+           member3Name: $scope.user.member3Name,
+          member3Email: $scope.user.member3Email,
+          member3Phone:$scope.user.member3Phone,
+          college3Name:$scope.user.college3Name,
+          teamName:$scope.user.teamName,
           password: $scope.user.password
         })
         .then( function() {

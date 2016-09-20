@@ -3,39 +3,162 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="heading">Sign up</h1>
+      <h1 class="heading">Register</h1>
     </div>
     <div class="col-sm-12">
       <form class="form" name="form" ng-submit="register(form)" novalidate>
 
-        <div class="form-group" ng-class="{ 'has-success': form.name.$valid && submitted,
-                                            'has-error': form.name.$invalid && submitted }">
-          <label>Name</label>
+        <div class="form-group" ng-class="{ 'has-success': form.member1Name.$valid && submitted,
+                                            'has-error': form.member1Name.$invalid && submitted }">
+          <label>Team Member 1</label>
 
-          <input type="text" name="name" class="form-control" ng-model="user.name"
+          <input type="text" name="member1Name" class="form-control" ng-model="user.member1Name"
                  required/>
-          <p class="help-block" ng-show="form.name.$error.required && submitted">
-            A name is required
+          <p class="help-block" ng-show="form.member1Name.$error.required && submitted">
+          Team Member 1's Name is required
           </p>
         </div>
 
-        <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
-                                            'has-error': form.email.$invalid && submitted }">
-          <label>Email</label>
+        <div class="form-group" ng-class="{ 'has-success': form.member1Email.$valid && submitted,
+                                            'has-error': form.member1Email.$invalid && submitted }">
+          <label>Team Member 1  Email (Use this to login)</label>
 
-          <input type="email" name="email" class="form-control" ng-model="user.email"
+          <input type="email" name="member1Email" class="form-control" ng-model="user.member1Email"
                  required
                  mongoose-error/>
-          <p class="help-block" ng-show="form.email.$error.email && submitted">
-            Doesn't look like a valid email.
+          <p class="help-block" ng-show="form.member1Email.$error.email && submitted">
+            Enter a valid email.
           </p>
-          <p class="help-block" ng-show="form.email.$error.required && submitted">
-            What's your email address?
+          <p class="help-block" ng-show="form.member1Email.$error.required && submitted">
+            Email address is required
           </p>
-          <p class="help-block" ng-show="form.email.$error.mongoose">
+          <p class="help-block" ng-show="form.member1Email.$error.mongoose">
             {{ errors.email }}
           </p>
         </div>
+        <div class="form-group" ng-class="{ 'has-success': form.member1Phone.$valid && submitted,
+                                            'has-error': form.member1Phone.$invalid && submitted }">
+          <label>Team Member 1 Phone Number</label>
+
+          <input type="number" name="member1Phone" class="form-control" ng-model="user.member1Phone"
+           ng-minlength="10" ng-maxlength="10"
+                 required/>
+          <p class="help-block" ng-show="form.member1Phone.$error.required && submitted">
+            Captain's contact number is required
+          </p>
+          <p class="help-block" ng-show="form.member1Phone.$error.minlength && submitted">
+            Enter 10 digit number
+          </p>
+
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.college1Name.$valid && submitted,
+                                            'has-error': form.college1Name.$invalid && submitted }">
+          <label>Team Member 1 Institute</label>
+
+          <input type="text" name="college1Name" class="form-control" ng-model="user.college1Name"
+                 required/>
+          <p class="help-block" ng-show="form.college1Name.$error.required && submitted">
+            Institute Name is required
+          </p>
+        </div>
+
+         <div class="form-group" ng-class="{ 'has-success': form.member2Name.$valid && submitted,
+                                            'has-error': form.member2Name.$invalid && submitted }">
+          <label>Team Member 2</label>
+
+          <input type="text" name="member2Name" class="form-control" ng-model="user.member2Name"
+                 />
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.member2Email.$valid && submitted,
+                                            'has-error': form.member2Email.$invalid && submitted }">
+          <label>Team Member 2 Email</label>
+
+          <input type="email" name="member2Email" class="form-control" ng-model="user.member2Email"
+                 mongoose-error/>
+          <p class="help-block" ng-show="form.member2Email.$error.email && submitted">
+            Enter a valid email.
+          </p>
+          <p class="help-block" ng-show="form.member2Email.$error.mongoose">
+            {{ errors.email }}
+          </p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-success': form.member2Phone.$valid && submitted,
+                                            'has-error': form.member2Phone.$invalid && submitted }">
+          <label>Team Member 2 Phone Number</label>
+
+          <input type="number" name="member2Phone" class="form-control" ng-model="user.member2Phone"
+           ng-minlength="10" ng-maxlength="10"
+                 />
+          <p class="help-block" ng-show="form.member2Phone.$error.minlength && submitted">
+            Enter 10 digit number
+          </p>
+
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.college2Name.$valid && submitted,
+                                            'has-error': form.college2Name.$invalid && submitted }">
+          <label>Team Member 2 Institute</label>
+
+          <input type="text" name="college2Name" class="form-control" ng-model="user.college2Name"/>         
+        </div>
+
+          <div class="form-group" ng-class="{ 'has-success': form.member3Name.$valid && submitted,
+                                            'has-error': form.member3Name.$invalid && submitted }">
+          <label>Team Member 3</label>
+
+          <input type="text" name="member3Name" class="form-control" ng-model="user.member3Name"
+                 />
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.member3Email.$valid && submitted,
+                                            'has-error': form.member3Email.$invalid && submitted }">
+          <label>Team Member 3 Email</label>
+
+          <input type="email" name="member3Email" class="form-control" ng-model="user.member3Email"
+                 mongoose-error/>
+          <p class="help-block" ng-show="form.member3Email.$error.email && submitted">
+            Enter a valid email.
+          </p>
+          <p class="help-block" ng-show="form.member3Email.$error.mongoose">
+            {{ errors.email }}
+          </p>
+        </div>
+        <div class="form-group" ng-class="{ 'has-success': form.member3Phone.$valid && submitted,
+                                            'has-error': form.member3Phone.$invalid && submitted }">
+          <label>Team Member 3 Phone Number</label>
+
+          <input type="number" name="member3Phone" class="form-control" ng-model="user.member3Phone"
+           ng-minlength="10" ng-maxlength="10"
+                 />
+          <p class="help-block" ng-show="form.member3Phone.$error.minlength && submitted">
+            Enter 10 digit number
+          </p>
+
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.college3Name.$valid && submitted,
+                                            'has-error': form.college3Name.$invalid && submitted }">
+          <label>Team Member 3 Institute</label>
+
+          <input type="text" name="college3Name" class="form-control" ng-model="user.college3Name"
+                 />
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-success': form.teamName.$valid && submitted,
+                                            'has-error': form.teamName.$invalid && submitted }">
+          <label>Team Name</label>
+
+          <input type="text" name="teamName" class="form-control" ng-model="user.teamName"
+                 required/>
+          <p class="help-block" ng-show="form.teamName.$error.required && submitted">
+            Team Name is required
+          </p>
+        </div>
+
+
+        
 
         <div class="form-group" ng-class="{ 'has-success': form.password.$valid && submitted,
                                             'has-error': form.password.$invalid && submitted }">
@@ -56,7 +179,7 @@
 
         <div class="form-group" ng-class="{ 'has-success': form.terms.$valid && submitted,
                                             'has-error': form.terms.$invalid && submitted }">
-          <label>I agree to terms and conditions</label>
+          <label>The team agrees to terms and conditions</label>
 
           <input type="checkbox" name="terms"  ng-model="user.terms"
                  required
@@ -71,26 +194,19 @@
         </div>
 
         <div>
-          <button class="btn btn-inverse btn-lg btn-login" type="submit">
-            Sign up
+          <button class="btn btn-inverse btn-lg btn-login btn-primary" type="submit">
+            Register
           </button>
-          <a class="btn btn-default btn-lg btn-register" href="/login">
+          <a class="btn btn-default btn-lg btn-register btn-primary" href="/login">
             Login
           </a>
         </div>
 
-        <hr>
-        <div>
-          <a class="btn btn-facebook" href="" ng-click="loginOauth('facebook')">
-            <i class="fa fa-facebook"></i> Connect with Facebook
-          </a>
-          <a class="btn btn-twitter" href="" ng-click="loginOauth('twitter')">
-            <i class="fa fa-twitter"></i> Connect with Twitter
-          </a>
-        </div>
+       
+    
       </form>
     </div>
   </div>
-  <hr>
+
 </div>
 </div>
