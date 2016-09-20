@@ -6,10 +6,10 @@ var crypto = require('crypto');
 var authTypes = ['github', 'twitter', 'facebook', 'google'];
 
 var UserSchema = new Schema({
-  member1Name: String,
-  member1Email: { type: String, lowercase: true },
-  member1Phone:String,
-  college1Name:String,
+  name: String,
+  email: { type: String, lowercase: true },
+  phone:String,
+  collegeName:String,
   member2Name: String,
   member2Email: { type: String, lowercase: true },
   member2Phone:String,
@@ -71,7 +71,7 @@ UserSchema
 
 // Validate empty email
 UserSchema
-  .path('member1Email')
+  .path('email')
   .validate(function(email) {
     if (authTypes.indexOf(this.provider) !== -1) return true;
     return email.length;
@@ -87,7 +87,7 @@ UserSchema
 
 // Validate email is not taken
 UserSchema
-  .path('member1Email')
+  .path('email')
   .validate(function(value, respond) {
     var self = this;
     this.constructor.findOne({email: value}, function(err, user) {

@@ -10,10 +10,10 @@ angular.module('imgApp')
 
       if(form.$valid) {
         Auth.createUser({
-          member1Name: $scope.user.member1Name,
-          member1Email: $scope.user.member1Email,
-          member1Phone:$scope.user.member1Phone,
-          college1Name:$scope.user.college1Name,
+          name: $scope.user.member1Name,
+          email: $scope.user.member1Email,
+          phone:$scope.user.member1Phone,
+          collegeName:$scope.user.college1Name,
            member2Name: $scope.user.member2Name,
           member2Email: $scope.user.member2Email,
           member2Phone:$scope.user.member2Phone,
