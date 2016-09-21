@@ -18,7 +18,6 @@ angular.module('imgApp')
 
 jQuery('.nav-scroll').on('click',function(event) {
   var target = jQuery(this).attr('name');
-  console.log(target);
   
   if(jQuery(target).offset()){
     jQuery('html, body').animate({
