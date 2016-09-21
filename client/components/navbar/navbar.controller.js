@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('imgApp')
-  .controller('NavbarCtrl', function ($scope, $location, Auth) {
+  .controller('NavbarCtrl', function ($scope, $location, Auth, $timeout) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
@@ -17,12 +17,23 @@ angular.module('imgApp')
 });
 
 jQuery('.nav-scroll').on('click',function(event) {
-  event.preventDefault();
-  var target = jQuery(this).attr('href');
+  var target = jQuery(this).attr('name');
+  console.log(target);
   
-  jQuery('html, body').animate({
-    scrollTop: jQuery(target).offset().top-30
-  }, 800);
+  if(jQuery(target).offset()){
+    jQuery('html, body').animate({
+      scrollTop: jQuery(target).offset().top-30
+    }, 800);
+  }
+  else{
+    $timeout(function() {
+      jQuery('html, body').animate({
+        scrollTop: jQuery(target).offset().top-30
+      }, 800);
+    }, 10);
+
+  }
+
 });
 
 
