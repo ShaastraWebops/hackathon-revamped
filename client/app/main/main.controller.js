@@ -6,9 +6,12 @@ angular.module('imgApp')
  
   jQuery(document).ready(function(){
  
-         
+          
   jQuery(this).scrollTop(0);
  });
+  
+
+
 // jQuery(document).keydown(function(e){
 //   var current = jQuery('div.current').data('section');
 //     if (e.keyCode == 40) {

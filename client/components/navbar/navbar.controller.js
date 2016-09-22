@@ -5,7 +5,10 @@ angular.module('imgApp')
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
-    }];
+    },
+    ];
+
+ 
 
   jQuery('.navbar li').click(function() {
   jQuery('.navbar li.active').removeClass('active');
@@ -16,8 +19,10 @@ angular.module('imgApp')
   
 });
 
+
 jQuery('.nav-scroll').on('click',function(event) {
   var target = jQuery(this).attr('name');
+  console.log(target);
   
   if(jQuery(target).offset()){
     jQuery('html, body').animate({
@@ -26,16 +31,17 @@ jQuery('.nav-scroll').on('click',function(event) {
   }
   else{
     $timeout(function() {
+      
       jQuery('html, body').animate({
         scrollTop: jQuery(target).offset().top-30
       }, 800);
-    }, 10);
+    }, 20);
 
   }
 
 });
 
-
+    
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;

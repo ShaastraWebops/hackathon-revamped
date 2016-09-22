@@ -1,4 +1,3 @@
-
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 
@@ -27,7 +26,7 @@
 <div class="col-xs-7 col-lg-4 col-sm-6 aboutus">
 <h2 >ABOUT US</h2>
 <div class="jumbotron">
-<p>Organised by TNHSP and IIT Madras, The Emergency Services Application Hackathon brings you the opportunity to innovate and have a positive impact the current structure of the 108 Emergency Services in Tamil Nadu .</p>
+<p>Organised by TNHSP and IIT Madras, The Emergency Services Application Hackathon brings you the opportunity to innovate and have a positive impact on the current structure of the 108 Emergency Services in Tamil Nadu .</p>
 <p>
 In case of any emergency, rapid intervention is critical in determining the outcome. The emergency service personnel have the crucial responsibility of bringing the response time to as minimal as possible.</p> 
 <p>And Innovations in technology can play an integral part in achieving this goal. The aim of this hackathon is to come up with solutions that leverage the capabilities of a smart phone and integrate them with the backend infrastructure at the Call-Centre to make the flow of information fast and seamless thereby greatly increasing  the efficiency.
@@ -55,8 +54,9 @@ In case of any emergency, rapid intervention is critical in determining the outc
 
 <!-- About content -->
 <div class="row">
-
-<div class="jumbotron col-xs-7 col-lg-7 col-sm-6 theme" >
+<div class="col-xs-7 col-lg-7 col-sm-6 theme">
+<h2 id="theme">THEME</h2>
+<div class="jumbotron" >
 <p>The solution should address a minimum of the following aspects:</p>
 <h2 class="themeHead">A Smartphone Application that</h2>
 <ul class="themeHead">
@@ -84,7 +84,7 @@ or present offline</li>
 service application.
 </li>
 <br>
-
+</ul>
 <p>Developing Algorithms for Analytics on the data collected is encouraged.
 
 Any other aspect of innovation above and beyond the aforementioned in the theme of Emergency
@@ -92,7 +92,7 @@ Any other aspect of innovation above and beyond the aforementioned in the theme 
 services is highly welcome.
 </p>
 </div>
-
+</div>
 
 
 </div>
@@ -115,7 +115,7 @@ services is highly welcome.
 
 <!-- Panel with questions -->
 <div id="panelDiv">
- 
+ <h2>FAQ</h2>
 
 <accordion close-others="true">
     <accordion-group is-open="isopen" intially-open>
@@ -166,8 +166,9 @@ services is highly welcome.
            </i>
            </div>
        </accordion-heading>
+       <p class="acc">
        You are encouraged to use any 3rd party services, APIs, open source projects, libraries, and frameworks as long as they are publicly available on the web and do not infringe on any copyrights .
-
+       </p>
    </accordion-group>
      <accordion-group is-open="isopen4" >
         <accordion-heading ng-click="isopen4=!isopen4">

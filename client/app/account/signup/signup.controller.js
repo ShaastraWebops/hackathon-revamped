@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('imgApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
+  .controller('SignupCtrl', function ($scope, Auth,Modal, $location, $window) {
     $scope.user = {};
     $scope.errors = {};
+    $scope.tc=Modal.confirm.termsAndConditions();
+
+
 
     $scope.register = function(form) {
       $scope.submitted = true;

@@ -167,9 +167,7 @@ margin-left: -10%;
 .btn-primary{
   margin-top: 5vh;
 }
-.theme{
-  margin-left:10%; 
-}
+
 
 #comp{
   position: relative;
@@ -181,6 +179,17 @@ margin-left: -10%;
   text-align: center;
   left: 10vw;
   margin: 1vh;
+}
+.theme{
+position: relative;
+  text-align: center;
+  left: 20vw;
+  
+}
+#theme{
+  margin-bottom: -4%;
+  margin-left: -4.5vw;
+  font-family: headFont !important;
 }
 .themeHead{
 

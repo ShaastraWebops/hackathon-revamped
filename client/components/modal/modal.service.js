@@ -50,7 +50,7 @@ angular.module('imgApp')
               modal: {
                 dismissable: true,
                 title: 'Confirm Delete',
-                html: '<p>Are you sure you want to delete <strong>' + name + '</strong> ?</p>',
+              
                 buttons: [{
                   classes: 'btn-danger',
                   text: 'Delete',
@@ -71,7 +71,36 @@ angular.module('imgApp')
               del.apply(event, args);
             });
           };
-        }
+        },
+
+
+      termsAndConditions: function() { 
+      
+      return function() {
+        var args = Array.prototype.slice.call(arguments),
+            name = args.shift(),
+            theModal;
+
+        theModal = openModal({ //openModal is a function the modal service defines.  It is just a wrapper for $Modal
+          modal: {
+            dismissable: false,
+            title: 'Terms and conditions',
+         //set the modal message here, name is the parameter we passed in
+            buttons: [ {
+              classes: 'btn-danger',
+              text: 'Close',
+              click: function(event) {
+                theModal.close(event);
+              }
+            },]
+          }
+        }, 'modal-primary');
+      };
+    }
+
+
+
+
       }
     };
   });
