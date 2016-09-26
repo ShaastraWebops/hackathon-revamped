@@ -30,7 +30,7 @@ exports.create = function(req, res) {
   });*/
 };
 exports.createQuery = function(req, res) {
-  // console.log(req.user.name);
+  
   Img.create(req.body, function(err, img) {
     if(err) { return handleError(res, err); }
     return res.json(201, img);
