@@ -19,6 +19,9 @@ angular.module('imgApp')
   
 });
 
+   jQuery('.navbar-nav li a').click(function(e) {
+     jQuery('.navbar-collapse').hide();
+  });
 
 jQuery('.nav-scroll').on('click',function(event) {
   var target = jQuery(this).attr('name');

@@ -1,11 +1,10 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-
 <div id="home" class="content current section1" >
 <!-- Main Page contents -->
 <div class="row marketing">
   <h1>Emergency App Hackathon</h1>
-    <h2 id="innovate">Innovate.Develop.Save Lives</h2>
+    <h2 id="innovate">Innovate . Develop . Save Lives</h2>
 <h2 class="info">Prize Money of 2 lakhs up for grabs</h2>
 </div>
 <a href="#about" class="arrow nav-scroll arrow2">
@@ -58,7 +57,7 @@ In case of any emergency, rapid intervention is critical in determining the outc
 <h2 id="theme">THEME</h2>
 <div class="jumbotron" >
 <p>The solution should address a minimum of the following aspects:</p>
-<h2 class="themeHead">A Smartphone Application that</h2>
+<p class="themeHead">A Smartphone Application that</p>
 <ul class="themeHead">
 <li>relays the geo-location of the individual to the call centre</li>
 
@@ -67,7 +66,7 @@ In case of any emergency, rapid intervention is critical in determining the outc
 or present offline</li>
 </ul>
 
-<h2 class="themeHead">A Web Service Application that</h2>
+<p class="themeHead">A Web Service Application that</p>
 <ul class="themeHead">
 <li>simulates the backend infrastructure at the call centre</li>
 
@@ -76,7 +75,7 @@ or present offline</li>
 <li>Logs information about every call to a database and dispatches call to nearest ambulance</li>
 </ul>
 
-<h2 class="themeHead">A database interface to</h2>
+<p class="themeHead">A database interface to</p>
 
 <ul class="themeHead">
 <li>retrieve and store data in the format specified so as to not limit its access only to the web
@@ -85,7 +84,7 @@ service application.
 </li>
 <br>
 </ul>
-<p>Developing Algorithms for Analytics on the data collected is encouraged.
+<p class="themeHead">Developing Algorithms for Analytics on the data collected is encouraged.
 
 Any other aspect of innovation above and beyond the aforementioned in the theme of Emergency
 
@@ -115,7 +114,7 @@ services is highly welcome.
 
 <!-- Panel with questions -->
 <div id="panelDiv">
- <h2>FAQ</h2>
+ <h2 id="faqHead">FAQ</h2>
 
 <accordion close-others="true">
     <accordion-group is-open="isopen" intially-open>
@@ -313,16 +312,15 @@ services is highly welcome.
 </div> -->
 
 <div class="row">
-<div class="jumbotron col-xs-6 col-lg-5  sched tab1">
-<ul class="sch row">
-<li><h2>Structure of Event</h2></li>
-<li><p>Oct 10th  Preliminary</p></li>
+<div class="col-xs-6 col-lg-6 col-sm-6 col-md-6 sch jumbotron ">
 
-<li><p>Oct 15th  Shortlist release</p></li> 
+<h2>Structure of Event</h2>
+<p>Oct 10th  Preliminary</p>
 
-<li><p>Nov 27th  Finale at IITM</p></li>
+<p>Oct 15th  Shortlist release</p> 
 
-</ul>
+<p>Nov 27th  Finale at IITM</p>
+
 </div>
 </div>
 
@@ -342,19 +340,9 @@ services is highly welcome.
 </a>
 
 
-
-
-
-
-
-
-
-
-
-
 <div class="row">
     <div class="col-sm-12">
-      <h1>Contact</h1>
+      <h1 id="con">Contact</h1>
     </div>
     <div class="col-sm-12">
       <form class="form" name="contact" ng-submit="querySubmit(contact)" novalidate>
@@ -370,10 +358,7 @@ services is highly welcome.
           </p>
         </div>
 
-        
-
-
-        <div class="form-group" ng-class="{ 'has-success': contact.email.$valid && submitted,
+         <div class="form-group" ng-class="{ 'has-success': contact.email.$valid && submitted,
                                             'has-error': contact.email.$invalid && submitted }">
           <label>Email</label>
 
@@ -408,20 +393,10 @@ services is highly welcome.
           " />
         
         </div>
-
-        
-
         
       </form>
     </div>
 </div>
-
-
-
-
-
-
-
 
 </div>
   
