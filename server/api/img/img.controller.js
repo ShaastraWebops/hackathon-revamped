@@ -2,6 +2,9 @@
 
 var _ = require('lodash');
 var Img = require('./img.model');
+var mkdirp = require('mkdirp');
+var compose = require('composable-middleware');
+
 
 // Get list of imgs
 exports.index = function(req, res) {
@@ -22,13 +25,27 @@ exports.show = function(req, res) {
 
 // Creates a new img in the DB.
 exports.create = function(req, res) {
-  console.log(req.user.name);
+  console.log("came");
   return res.json(201, {message: "Boom!"});
   /*Img.create(req.body, function(err, img) {
     if(err) { return handleError(res, err); }
     return res.json(201, img);
   });*/
 };
+
+exports.createDirectory = function(req, res) {
+  // mkdirp('client/assets/uploads/', function (err) {
+  //   if (err) console.error(err)
+  //   else console.log('pow!')
+  // });
+
+  return compose()
+    .use(function(req, res, next) {
+      console.log(req);
+      next();
+    });
+};
+
 exports.createQuery = function(req, res) {
   // console.log(req.user.name);
   Img.create(req.body, function(err, img) {

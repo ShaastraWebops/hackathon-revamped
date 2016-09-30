@@ -12,6 +12,7 @@ var auth = require('../../auth/auth.service');
 router.get('/', controller.index);
 router.get('/:id', controller.show);
 router.post('/', auth.isAuthenticated(), upload.single('file'), controller.create);
+router.post('/upload', upload.single('file'), controller.create);
 router.post('/query',controller.createQuery);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
