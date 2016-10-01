@@ -18,4 +18,7 @@ router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
 router.delete('/:id', controller.destroy);
 
+router.get('/files/:eventId', controller.getFiles);
+router.get('/:eventId/:fileName', controller.download);
+
 module.exports = router;

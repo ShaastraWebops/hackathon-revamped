@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var Img = require('./img.model');
 var mkdirp = require('mkdirp');
+var fs = require('fs');
 var compose = require('composable-middleware');
 
 
@@ -33,18 +34,21 @@ exports.create = function(req, res) {
   });*/
 };
 
-exports.createDirectory = function(req, res) {
-  // mkdirp('client/assets/uploads/', function (err) {
-  //   if (err) console.error(err)
-  //   else console.log('pow!')
-  // });
+exports.download = function (req, res) {
+  var file = req.params.fileName;
+  var eventId = req.params.eventId;
+  var path = 'client/assets/uploads/' + eventId + '/' + file;
+  console.log(path);
+  res.download(path);
+}
 
-  return compose()
-    .use(function(req, res, next) {
-      console.log(req);
-      next();
-    });
-};
+exports.getFiles = function (req, res) {
+  var eventId = req.params.eventId;
+  fs.readdir('client/assets/uploads/' + eventId + '/', function(err, items) {
+    console.log(items);
+    res.json(items);
+  });
+}
 
 exports.createQuery = function(req, res) {
   
