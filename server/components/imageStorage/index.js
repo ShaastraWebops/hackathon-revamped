@@ -1,5 +1,6 @@
 var multer  = require('multer');
 var mkdirp = require('mkdirp');
+var mime = require('mime');
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
   	var fullname = file.originalname;
