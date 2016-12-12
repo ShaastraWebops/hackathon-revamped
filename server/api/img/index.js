@@ -5,7 +5,7 @@ var app = express()
 var controller = require('./img.controller');
 var multer  = require('multer')
 var storage = require('../../components/imageStorage').storage;
-var upload = multer({ storage: storage, limits: {fileSize: 1000000}});
+var upload = multer({ storage: storage, limits: {fileSize: 10000000}});
 var router = express.Router();
 var auth = require('../../auth/auth.service');
 
